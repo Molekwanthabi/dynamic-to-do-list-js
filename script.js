@@ -1,4 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function(<button id="add-task">Add Task</button>
+<input id="task-input" type="text">
+<ul id="task-list"></ul>)  
+ {
     const addButton = document.getElementById('add-task');
     const taskInput = document.getElementById('task-input');
     const taskList  = document.getElementById('task-list');
