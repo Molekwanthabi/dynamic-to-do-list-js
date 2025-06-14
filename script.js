@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
         removeButton.textContent = "Remove";
         removeButton.className = 'remove-btn';
 
-        // Set up the event for removing the task when the button is clicked
+        // Set up the event for removing the task when the button is clicked 
         removeButton.onclick = function () {
-            taskList.removeChild(li); // Remove the list item from the task list
+        taskList.removeChild(li); // Remove the list item from the task list
         };
 
         // Append the remove button to the list item
