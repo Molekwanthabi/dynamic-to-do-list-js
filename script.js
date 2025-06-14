@@ -73,13 +73,10 @@ function addTask() {
         taskList.removeChild(li);  // Remove the li element from taskList
     };
 
-    // 4️⃣ Append the remove button to the list item
     li.appendChild(removeButton);
 
-    // 5️⃣ Append the list item to the task list
     taskList.appendChild(li);
 
-    // 6️⃣ Clear the task input field
     taskInput.value = "";
 }
 
