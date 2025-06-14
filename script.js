@@ -64,24 +64,21 @@ function addTask() {
 function addTask() {const li = document.createElement('li');
         li.textContent = taskText;
     }
-    removeButton.onclick = function () { const removeButton = document.createElement('button');
-    removeButton.textContent = "Remove";
-    removeButton.className = 'remove-btn';
-    removeButton.onclick = function () {
-    taskList.removeChild(li);  // Remove the li element from the task list
-    };
-    li.appendChild(removeButton);
-    taskList.appendChild(li);
-    taskInput.value = "";
-    }
-    addButton.addEventListener('click', addTask);
-taskInput.addEventListener('keypress', function (event) {
-        if (event.key === 'Enter') {
-            addTask();
- }
-    });
+if (taskText === "") {
+    alert("Please enter a task!");
+    return;
+}
+const li = document.createElement('li');
+li.textContent = taskText;
+<li>My task</li>
+    
+const removeButton = document.createElement('button');
+removeButton.textContent = "Remove";
+removeButton.className = 'remove-btn';
+removeButton.onclick = function () {
+    taskList.removeChild(li);
+};
 
-});
 
 
     
