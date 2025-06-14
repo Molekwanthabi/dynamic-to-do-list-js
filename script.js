@@ -52,3 +52,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+function addTask() {
+    // Get and trim the value from the task input field
+    const taskText = taskInput.value.trim();
+
+    // Check if the input is empty
+    if (taskText === "") {
+        alert("Please enter a task!");
+        return;
+    }
+
+    const li = document.createElement('li');
+    li.textContent = taskText;
+    const removeButton = document.createElement('button');
+    removeButton.textContent = "Remove";
+    removeButton.className = 'remove-btn';
+    removeButton.onclick = function () {
+        taskList.removeChild(li);  // Remove the li element from taskList
+    };
+    li.appendChild(removeButton);
+    taskList.appendChild(li);
+    taskInput.value = "";
+}
